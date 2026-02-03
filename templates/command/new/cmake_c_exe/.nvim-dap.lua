@@ -4,7 +4,7 @@ dap.adapters.gdb = function(cb, config)
 	cb({
 		id = "gdb",
 		type = "executable",
-		command = vim.fs.normalize("~/apps/binutils-gdb/bin/gdb"),
+		command = "gdb",
 		args = { "--quiet", "--interpreter=dap" },
 	})
 end
