@@ -10,7 +10,7 @@ from conan.tools.files import (
 )
 
 
-class {{package_name}}Connan(ConanFile):
+class {{package_name | capitalize}}Connan(ConanFile):
     name = "{{name}}"
 
     license = "<Put the package license here>"

@@ -11,7 +11,7 @@ from conan.errors import ConanException
 from conan.tools.gnu import Autotools, AutotoolsDeps, AutotoolsToolchain, PkgConfigDeps
 
 
-class {{package_name}}Connan(ConanFile):
+class {{package_name | capitalize}}Connan(ConanFile):
     name = "{{name}}"
 
     license = "<Put the package license here>"

@@ -8,7 +8,7 @@ def get_version():
     version = re.search("project\(.+ VERSION (.*)\)", content).group(1)
     return version.strip()
 
-class {{package_name}}Recipe(ConanFile):
+class {{package_name | capitalize}}Recipe(ConanFile):
     name = "{{name}}"
     version = get_version()
     package_type = "application"
