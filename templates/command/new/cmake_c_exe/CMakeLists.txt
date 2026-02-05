@@ -32,9 +32,10 @@ add_executable(test-{{name}} test/test-main.c)
 
 add_executable(${PROJECT_NAME} src/main.c)
 {% if requires is defined -%}
+target_link_libraries({{name}} PRIVATE 
 {% for require in requires -%}
-target_link_libraries({{name}} PRIVATE {{as_name(require)}}::{{as_name(require)}})
-{% endfor %}
+    {{as_name(require)}}::{{as_name(require)}}
+{% endfor %})
 {%- endif %}
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}
         RUNTIME DESTINATION bin
