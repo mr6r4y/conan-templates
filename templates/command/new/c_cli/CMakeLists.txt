@@ -12,7 +12,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Make root folder the project folder for #FILE macro
-set(CMAKE_C_FLAGS "-ffile-prefix-map=${CMAKE_CURRENT_LIST_DIR}/src/=")
+add_compile_options("-ffile-prefix-map=${CMAKE_CURRENT_LIST_DIR}/src/=")
 
 {% if requires is defined -%}
 {% for require in requires -%}
